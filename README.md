@@ -1,6 +1,6 @@
 # benramsey/slack-irc Docker Image
 
-[![Docker Automated Build](https://img.shields.io/docker/automated/benramsey/slack-irc.svg?style=flat-square)](https://hub.docker.com/r/benramsey/slack-irc/) [![MIT License](https://img.shields.io/github/license/benramsey/docker-slack-irc.svg?style=flat-square)](https://github.com/benramsey/docker-slack-irc/blob/master/LICENSE) [![Docker Build Status](https://img.shields.io/docker/build/benramsey/slack-irc.svg?style=flat-square)](https://hub.docker.com/r/benramsey/slack-irc/builds/)
+[![Docker Automated Build](https://img.shields.io/docker/automated/benramsey/slack-irc.svg?style=flat-square)](https://hub.docker.com/r/benramsey/slack-irc/) [![MIT License](https://img.shields.io/github/license/ramsey/docker-slack-irc.svg?style=flat-square)](https://github.com/ramsey/docker-slack-irc/blob/master/LICENSE) [![Docker Build Status](https://img.shields.io/docker/build/benramsey/slack-irc.svg?style=flat-square)](https://hub.docker.com/r/benramsey/slack-irc/builds/)
 
 This is a Docker image for [Martin Ek](https://github.com/ekmartin)'s [slack-irc bridge](https://github.com/ekmartin/slack-irc).
 
