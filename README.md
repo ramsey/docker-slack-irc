@@ -9,13 +9,13 @@ This is a Docker image for [Martin Ek](https://github.com/ekmartin)'s [slack-irc
 To run the slack-irc bridge, set up a configuration file named `config.json` and launch a slack-irc Docker container for that configuration:
 
 ``` bash
-docker run -it -v /path/to/config-dir:/app benramsey/slack-irc
+docker run -it -v /path/to/config-dir:/config benramsey/slack-irc
 ```
 
 Alternately, you may give your configuration a different file name and pass the name as an argument, when launching the container. In this example, our configuration file is named `my-config.json`.
 
 ``` bash
-docker run -it -v /path/to/config-dir:/app benramsey/slack-irc my-config.json
+docker run -it -v /path/to/config-dir:/config benramsey/slack-irc my-config.json
 ```
 
 ## Configuration File
@@ -24,12 +24,12 @@ slack-irc uses Slack's [bot users](https://api.slack.com/bot-users). This means 
 
 slack-irc requires a JSON-configuration file. The configuration file needs to be an object or an array, depending on the number of IRC bots you want to run. This allows you to use one instance of slack-irc for multiple Slack teams if wanted, even if the IRC channels are on different networks.
 
-By default, the Docker container will look for a file named `config.json` in the `/app` directory. You may give this file a different name if you pass the file name as an argument when running the container. The file must be accessible from the `/app` directory in the container; use the `-v` option to tell Docker the path to the host directory you want to expose as `/app` within the running container.
+By default, the Docker container will look for a file named `config.json` in the `/config` directory. You may give this file a different name if you pass the file name as an argument when running the container. The file must be accessible from the `/config` directory in the container; use the `-v` option to tell Docker the path to the host directory you want to expose as `/config` within the running container.
 
 To set the log level to debug, export the environment variable `NODE_ENV` as `development`. For example:
 
 ``` bash
-docker run -it -v /path/to/config-dir:/app -e NODE_ENV=development benramsey/slack-irc
+docker run -it -v /path/to/config-dir:/config -e NODE_ENV=development benramsey/slack-irc
 ```
 
 slack-irc also supports invite-only IRC channels, and will join any channels it's invited to as long as they're present in the channel mapping.
